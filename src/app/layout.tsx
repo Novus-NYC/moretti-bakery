@@ -1,26 +1,30 @@
-import "./globals.css"
-import Navbar from "@/lib/components/navbar"
-import Footer from "@/lib/components/footer"
+import type { Metadata } from "next";
+import "./globals.css";
+import Navbar from "@/lib/components/navbar";
+import Footer from "@/lib/components/footer";
+import { siteInfo } from "@/lib/data";
 
-export const metadata = {
-  title: "Business Name",
-  description: "Short description of the business."
-}
+export const metadata: Metadata = {
+  title: `${siteInfo.name} — ${siteInfo.tagline}`,
+  description:
+    "Moretti Bakery — Staten Island's favorite bakery. Carrying on my mother's dream with freshly baked cakes, pastries, signature creations, and seasonal specials.",
+  icons: {
+    icon: "/images/logo.png",
+  },
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen flex flex-col">
+      <body className="min-h-screen bg-bakery-bg font-body text-bakery-ink antialiased">
         <Navbar />
-        <main className="flex-1 max-w-6xl mx-auto px-6 py-12">
-          {children}
-        </main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
-  )
+  );
 }

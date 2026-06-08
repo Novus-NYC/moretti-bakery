@@ -1,4 +1,4 @@
-# Purpose
+`# Purpose
 This repository is the base template that should be used for all future businesses, including basic files such as navbar, footer, and other configs.
 
 # Business Name
