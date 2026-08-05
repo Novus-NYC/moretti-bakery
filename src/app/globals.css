@@ -15,8 +15,10 @@ body {
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
-  background: #FAF7F3;
-  color: #1A1208;
+  background:
+    linear-gradient(180deg, rgba(255, 249, 244, 0.96), rgba(248, 233, 218, 0.55)),
+    #FFF9F4;
+  color: #24130E;
   overflow-x: hidden;
 }
 
@@ -25,8 +27,22 @@ body {
 }
 
 ::selection {
-  background: #F0D4A0;
-  color: #1A1208;
+  background: #F5D57E;
+  color: #24130E;
+}
+
+a,
+button,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.section-kicker {
+  font-family: var(--font-sub), "Montserrat", sans-serif;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
 /* btn-line — animated underline CTA used in About sections */

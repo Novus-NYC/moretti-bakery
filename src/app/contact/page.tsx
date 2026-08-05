@@ -7,15 +7,24 @@ import SocialIcon from "@/components/SocialIcon";
 export default function ContactPage() {
   return (
     <>
-      <div className="bg-bakery-ink pb-20 pt-36">
-        <div className="mx-auto max-w-7xl px-5 md:px-8">
-          <p className="mb-4 font-sub text-sm font-extrabold uppercase tracking-widest text-bakery-gold">
+      <div className="relative overflow-hidden bg-bakery-ink pb-20 pt-36">
+        <Image
+          src="/images/assorted-jumbo-cupcakes.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover opacity-35"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-bakery-ink via-bakery-ink/85 to-bakery-ink/40" />
+        <div className="relative mx-auto max-w-7xl px-5 md:px-8">
+          <p className="section-kicker mb-4 text-bakery-goldLight">
             Visit the Bakery
           </p>
-          <h1 className="font-heading text-5xl font-black text-white sm:text-6xl md:text-7xl">
-            Find Us
+          <h1 className="max-w-3xl font-heading text-5xl font-black leading-tight text-white sm:text-6xl md:text-7xl">
+            Fresh sweets on Forest Ave
           </h1>
-          <p className="mt-5 max-w-xl text-lg leading-8 text-white/65">
+          <p className="mt-5 max-w-xl text-lg leading-8 text-white/70">
             Stop by for fresh cakes, pastries, cupcakes, and seasonal favorites.
             For custom orders, call or email the bakery directly.
           </p>
@@ -25,7 +34,7 @@ export default function ContactPage() {
       <section className="bg-bakery-bg py-20 md:py-28">
         <div className="mx-auto grid max-w-7xl gap-12 px-5 md:grid-cols-[1fr_1.25fr] md:px-8">
           <ScrollReveal>
-            <p className="mb-3 font-sub text-sm font-extrabold uppercase tracking-widest text-bakery-rose">
+            <p className="section-kicker mb-3 text-bakery-rose">
               Contact Info
             </p>
             <h2 className="mb-8 font-heading text-3xl font-black text-bakery-ink md:text-4xl">
@@ -59,7 +68,7 @@ export default function ContactPage() {
                       target="_blank"
                       rel="noreferrer"
                       aria-label={`${siteInfo.name} on ${social.platform}`}
-                      className="inline-flex items-center gap-2 rounded-full border border-bakery-line bg-bakery-surface px-3 py-2 font-sub text-xs font-extrabold uppercase tracking-wide text-bakery-inkSoft transition hover:border-bakery-rose hover:text-bakery-rose"
+                      className="inline-flex items-center gap-2 rounded-lg border border-bakery-line bg-bakery-surface px-3 py-2 font-sub text-xs font-extrabold uppercase tracking-wide text-bakery-inkSoft transition hover:border-bakery-rose hover:text-bakery-rose"
                     >
                       <SocialIcon platform={social.platform} className="h-4 w-4" />
                       {social.handle}
@@ -71,7 +80,7 @@ export default function ContactPage() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
-            <div className="relative min-h-[420px] overflow-hidden rounded-[24px] border border-bakery-line bg-bakery-cream shadow-card">
+            <div className="relative min-h-[420px] overflow-hidden rounded-lg border border-bakery-line bg-bakery-cream shadow-card">
               <Image
                 src="/images/assorted-jumbo-cupcakes.jpg"
                 alt="Assorted cupcakes at Moretti Bakery"
@@ -103,8 +112,8 @@ function InfoRow({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex items-start gap-4">
-      <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl border border-bakery-line bg-bakery-cream">
+    <div className="flex items-start gap-4 rounded-lg border border-bakery-line bg-white p-4 shadow-card">
+      <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-lg border border-bakery-line bg-bakery-cream">
         {icon}
       </div>
       <div>

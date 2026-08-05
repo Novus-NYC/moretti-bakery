@@ -3,6 +3,7 @@
 import { Suspense, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import {
   products,
   categoryMeta,
@@ -51,16 +52,24 @@ function MenuContent() {
 
   return (
     <>
-      {/* Page header */}
-      <div className="bg-bakery-ink pb-16 pt-32">
-        <div className="mx-auto max-w-7xl px-5 md:px-8">
-          <p className="mb-3 font-sub text-sm font-extrabold uppercase tracking-widest text-bakery-gold">
-            Moretti Bakery
+      <div className="relative overflow-hidden bg-bakery-ink pb-16 pt-36">
+        <Image
+          src="/images/cannoli-cake.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover opacity-40"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-bakery-ink via-bakery-ink/80 to-bakery-ink/40" />
+        <div className="relative mx-auto max-w-7xl px-5 md:px-8">
+          <p className="section-kicker mb-3 text-bakery-goldLight">
+            Moretti Bakery menu
           </p>
-          <h1 className="font-heading text-5xl font-black text-white sm:text-6xl md:text-7xl">
-            Our Menu
+          <h1 className="max-w-3xl font-heading text-5xl font-black leading-tight text-white sm:text-6xl md:text-7xl">
+            Pick up something sweet
           </h1>
-          <p className="mt-4 max-w-xl text-lg text-white/65">
+          <p className="mt-4 max-w-xl text-lg text-white/70">
             {activeMeta
               ? activeMeta.description
               : "Freshly baked, made with love — something for every sweet craving."}
@@ -68,18 +77,16 @@ function MenuContent() {
         </div>
       </div>
 
-      {/* Controls */}
-      <div className="sticky top-[72px] z-40 border-b border-bakery-line bg-bakery-surface/90 backdrop-blur-md">
+      <div className="sticky top-[74px] z-40 border-b border-bakery-line bg-bakery-surface/95 backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-5 py-3 md:px-8">
           <MenuFilterTabs active={activeCategory} onChange={setActiveCategory} />
 
-          {/* Sort */}
           <div className="flex items-center gap-2 font-sub text-xs font-semibold text-bakery-muted">
             <span className="hidden sm:inline">Sort:</span>
             <select
               value={sort}
               onChange={(e) => setSort(e.target.value as SortKey)}
-              className="rounded-lg border border-bakery-line bg-bakery-cream px-3 py-2 font-sub text-xs font-semibold text-bakery-ink outline-none transition focus:border-bakery-rose"
+              className="rounded-lg border border-bakery-line bg-white px-3 py-2 font-sub text-xs font-semibold text-bakery-ink outline-none transition focus:border-bakery-rose"
             >
               <option value="default">Featured</option>
               <option value="price-asc">Price: Low → High</option>
@@ -94,7 +101,6 @@ function MenuContent() {
       <div className="bg-bakery-bg py-12 md:py-16">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
 
-          {/* Result count */}
           <p className="mb-6 font-sub text-sm font-semibold text-bakery-muted">
             {filtered.length} item{filtered.length !== 1 ? "s" : ""}
             {activeCategory !== "all" && activeMeta
@@ -125,13 +131,13 @@ function MenuShell() {
     <>
       <div className="bg-bakery-ink pb-16 pt-32">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
-          <p className="mb-3 font-sub text-sm font-extrabold uppercase tracking-widest text-bakery-gold">
-            Moretti Bakery
+          <p className="section-kicker mb-3 text-bakery-goldLight">
+            Moretti Bakery menu
           </p>
           <h1 className="font-heading text-5xl font-black text-white sm:text-6xl md:text-7xl">
-            Our Menu
+            Pick up something sweet
           </h1>
-          <p className="mt-4 max-w-xl text-lg text-white/65">
+          <p className="mt-4 max-w-xl text-lg text-white/70">
             Freshly baked, made with love — something for every sweet craving.
           </p>
         </div>

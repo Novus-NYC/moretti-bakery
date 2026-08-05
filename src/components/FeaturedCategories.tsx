@@ -7,30 +7,26 @@ import { categoryMeta, products } from "@/lib/data";
 
 export default function FeaturedCategories() {
   return (
-    <section className="bg-bakery-bg py-24 md:py-32">
+    <section className="bg-bakery-bg pb-12 pt-4 md:pb-28 md:pt-4">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
 
-        {/* Header */}
-        <div className="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+        <div className="mb-10 flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div>
-            <p className="mb-3 text-sm font-extrabold uppercase tracking-widest text-bakery-rose">
-              Our Collections
+            <p className="section-kicker mb-3 text-bakery-rose">
+              Baked daily
             </p>
-            <h2 className="font-heading text-4xl font-black leading-tight text-bakery-ink sm:text-5xl md:text-6xl">
-              Browse Our
-              <br />
-              Sweet Selection
+            <h2 className="max-w-3xl font-heading text-4xl font-black leading-tight text-bakery-ink sm:text-5xl md:text-6xl">
+              Cakes, cookies, pastries, and celebration sweets
             </h2>
           </div>
           <Link
             href="/menu"
-            className="inline-flex self-start rounded-full bg-bakery-ink px-7 py-4 text-sm font-extrabold uppercase tracking-wide text-white transition hover:bg-bakery-rose md:self-auto"
+            className="inline-flex self-start rounded-lg bg-bakery-ink px-6 py-3.5 font-sub text-sm font-extrabold uppercase tracking-wide text-white transition hover:bg-bakery-rose md:self-auto"
           >
             View All Items
           </Link>
         </div>
 
-        {/* Category grid */}
         <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-5">
           {categoryMeta.map((cat, i) => (
             <motion.div
@@ -42,7 +38,7 @@ export default function FeaturedCategories() {
             >
               <Link
                 href={`/menu?category=${cat.id}`}
-                className="group relative flex aspect-[4/5] w-full flex-col overflow-hidden rounded-[20px] border border-bakery-line bg-bakery-ink transition-all hover:-translate-y-1 hover:shadow-[0_20px_40px_-12px_rgba(26,18,8,0.25)]"
+                className="group relative flex aspect-[4/5] w-full flex-col overflow-hidden rounded-lg border border-bakery-line bg-bakery-ink shadow-card transition-all hover:-translate-y-1 hover:shadow-soft"
               >
                 <Image
                   src={cat.image}
@@ -52,10 +48,8 @@ export default function FeaturedCategories() {
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
 
-                {/* Gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-bakery-ink/90 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-bakery-ink/90 via-bakery-ink/10 to-transparent" />
 
-                {/* Label */}
                 <div className="absolute bottom-0 left-0 right-0 p-4">
                   <span className="block font-heading text-base font-bold text-white sm:text-lg">
                     {cat.label}

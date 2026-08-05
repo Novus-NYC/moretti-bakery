@@ -19,7 +19,7 @@ export default function Footer() {
                 height={40}
                 className="h-10 w-10 flex-shrink-0"
               />
-              <span className="font-heading text-base font-bold text-white">
+              <span className="font-heading text-lg font-black text-white">
                 {siteInfo.name}
               </span>
             </div>
@@ -36,7 +36,7 @@ export default function Footer() {
                   rel="noreferrer"
                   aria-label={s.platform}
                   title={s.platform}
-                  className="flex h-9 w-9 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white/60 transition hover:border-transparent hover:bg-bakery-rose hover:text-white"
+                  className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-white/60 transition hover:border-transparent hover:bg-bakery-rose hover:text-white"
                 >
                   <SocialIcon platform={s.platform} />
                 </a>

@@ -13,7 +13,7 @@ export default function MenuFilterTabs({ active, onChange }: Props) {
   const tabs = [allTab, ...categoryMeta.map((c) => ({ id: c.id, label: c.label }))];
 
   return (
-    <div className="flex flex-wrap gap-2">
+    <div className="flex flex-wrap gap-2" role="tablist" aria-label="Menu categories">
       {tabs.map((tab) => {
         const isActive = active === tab.id;
         return (
@@ -21,10 +21,12 @@ export default function MenuFilterTabs({ active, onChange }: Props) {
             key={tab.id}
             type="button"
             onClick={() => onChange(tab.id as ProductCategory | "all")}
-            className={`rounded-full px-4 py-2 font-sub text-xs font-bold uppercase tracking-wide transition-all ${
+            role="tab"
+            aria-selected={isActive}
+            className={`rounded-lg border px-4 py-2 font-sub text-xs font-bold uppercase tracking-wide transition-all ${
               isActive
-                ? "bg-bakery-ink text-white"
-                : "bg-bakery-cream text-bakery-muted hover:bg-bakery-ink hover:text-white"
+                ? "border-bakery-ink bg-bakery-ink text-white"
+                : "border-bakery-line bg-white text-bakery-muted hover:border-bakery-rose hover:text-bakery-rose"
             }`}
           >
             {tab.label}
