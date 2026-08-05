@@ -24,9 +24,9 @@ const config: Config = {
         },
       },
       fontFamily: {
-        heading: ["var(--font-heading)", "Playfair Display", "serif"],
-        sub:     ["var(--font-sub)", "Montserrat", "sans-serif"],
-        body:    ["var(--font-body)", "DM Sans", "sans-serif"],
+        heading: ["var(--font-heading)", "Cinzel", "serif"],
+        sub:     ["var(--font-sub)", "Barlow Condensed", "sans-serif"],
+        body:    ["var(--font-body)", "Lora", "serif"],
       },
       boxShadow: {
         soft: "0 18px 50px -30px rgba(36,19,14,0.35)",

@@ -6,55 +6,41 @@ import Link from "next/link";
 import { MapPin, Phone } from "lucide-react";
 import { siteInfo } from "@/lib/data";
 
-const heroImages = [
-  "/images/mini-dream-cake-platter.jpg",
-  "/images/cannoli-cake.jpg",
-  "/images/assorted-jumbo-cupcakes.jpg",
-  "/images/seven-layer-cookies.png",
-  "/images/cinnamon-roll.jpg",
-  "/images/pistachio-dream-cake.png",
-];
-
 export default function Hero() {
   return (
-    <section className="relative flex min-h-[86svh] items-end overflow-hidden bg-bakery-ink pt-[74px]">
-      <div className="absolute inset-0 grid grid-cols-2 md:grid-cols-3">
-        {heroImages.map((src, index) => (
-          <div key={src} className="relative min-h-[34svh]">
-            <Image
-              src={src}
-              alt=""
-              fill
-              sizes="(min-width: 768px) 33vw, 50vw"
-              className="object-cover"
-              priority={index < 3}
-            />
-          </div>
-        ))}
-      </div>
-      <div className="absolute inset-0 bg-gradient-to-r from-bakery-ink via-bakery-ink/75 to-bakery-ink/30" />
-      <div className="absolute inset-0 bg-gradient-to-t from-bakery-ink/80 via-bakery-ink/20 to-bakery-ink/10" />
+    <section className="relative flex min-h-[88svh] items-center overflow-hidden bg-bakery-ink pt-[74px]">
+      <Image
+        src="/images/moretti-storefront.jpg"
+        alt="Moretti Bakery storefront on Forest Ave in Staten Island"
+        fill
+        sizes="100vw"
+        className="object-cover"
+        priority
+      />
+      <div className="absolute inset-0 bg-bakery-ink/35" />
+      <div className="absolute inset-0 bg-gradient-to-r from-bakery-ink via-bakery-ink/78 to-bakery-ink/20" />
+      <div className="absolute inset-0 bg-gradient-to-t from-bakery-ink/88 via-bakery-ink/18 to-transparent" />
 
       <motion.div
         initial={{ opacity: 0, y: 48 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.85, ease: "easeOut" }}
-        className="relative z-10 mx-auto grid w-full max-w-7xl gap-10 px-5 pb-8 pt-16 md:px-8 md:pb-10 lg:grid-cols-[minmax(0,0.94fr)_420px] lg:items-end"
+        className="relative z-10 mx-auto grid w-full max-w-7xl gap-10 px-5 py-16 md:px-8 lg:grid-cols-[minmax(0,0.9fr)_420px] lg:items-end"
       >
         <div>
           <p className="section-kicker mb-5 inline-flex items-center gap-2 text-bakery-goldLight">
-            Fresh cakes, pastries, and classics
+            Forest Ave bakery, made with love
           </p>
 
-          <h1 className="max-w-4xl font-heading text-6xl font-black leading-[0.92] text-white sm:text-7xl lg:text-[7.5rem]">
+          <h1 className="max-w-4xl font-heading text-5xl font-black uppercase leading-[0.96] text-white sm:text-7xl lg:text-[6.8rem]">
             Moretti
             <span className="block text-bakery-goldLight">Bakery</span>
           </h1>
 
-          <p className="mt-7 max-w-2xl text-lg leading-8 text-white/80 sm:text-xl">
-            Staten Island bakery carrying on a family legacy with dream cakes,
-            cookies, cupcakes, pastries, and seasonal sweets made for everyday
-            visits and celebrations.
+          <p className="mt-7 max-w-2xl font-body text-lg italic leading-8 text-white/80 sm:text-xl">
+            Stop into the Staten Island storefront for dream cakes, cupcakes,
+            cookies, pastries, and the old-school neighborhood sweetness that
+            made Moretti a Forest Ave favorite.
           </p>
 
           <div className="mt-10 flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
