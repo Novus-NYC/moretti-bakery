@@ -59,16 +59,18 @@ export default function AboutPage() {
         <div className="mx-auto grid max-w-7xl items-start gap-14 px-5 md:grid-cols-2 md:px-8">
 
           <ScrollReveal>
-            <div className="relative min-h-[440px] overflow-hidden rounded-lg border border-bakery-line bg-bakery-cream shadow-card">
-              <Image
-                src="/images/mini-dream-cake-platter.jpg"
-                alt="Moretti Bakery story"
-                fill
-                sizes="(min-width: 768px) 50vw, 100vw"
-                className="object-cover"
-              />
-              <div className="absolute bottom-5 left-5 right-5 rounded-lg bg-bakery-ink/80 p-4 text-center font-heading italic text-base text-white backdrop-blur-sm">
-                &ldquo;Every recipe carries her warmth.&rdquo;
+            <div className="bakery-image-frame min-h-[440px]">
+              <div className="bakery-image-frame-media">
+                <Image
+                  src="/images/mini-dream-cake-platter.jpg"
+                  alt="Moretti Bakery story"
+                  fill
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                  className="object-cover"
+                />
+                <div className="absolute bottom-5 left-5 right-5 rounded-lg bg-bakery-ink/80 p-4 text-center font-heading italic text-base text-white backdrop-blur-sm">
+                  &ldquo;Every recipe carries her warmth.&rdquo;
+                </div>
               </div>
             </div>
           </ScrollReveal>

@@ -50,17 +50,19 @@ export default function SocialSection() {
           {socialImages.map((src, index) => (
             <div
               key={src}
-              className={`relative overflow-hidden rounded-lg border border-bakery-line bg-white shadow-card ${
+              className={`bakery-image-frame ${
                 index === 1 ? "mt-10" : index === 2 ? "mt-20" : ""
               }`}
             >
-              <Image
-                src={src}
-                alt=""
-                fill
-                sizes="(min-width: 768px) 18vw, 31vw"
-                className="object-cover"
-              />
+              <div className="bakery-image-frame-media">
+                <Image
+                  src={src}
+                  alt=""
+                  fill
+                  sizes="(min-width: 768px) 18vw, 31vw"
+                  className="object-cover"
+                />
+              </div>
             </div>
           ))}
         </div>

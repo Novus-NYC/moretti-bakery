@@ -64,19 +64,21 @@ export default function ContactPage() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
-            <div className="relative h-full min-h-[420px] overflow-hidden rounded-lg border border-bakery-line bg-bakery-cream shadow-card md:min-h-0">
-              <Image
-                src="/images/assorted-jumbo-cupcakes.jpg"
-                alt="Assorted cupcakes at Moretti Bakery"
-                fill
-                sizes="(min-width: 768px) 55vw, 100vw"
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-bakery-ink/70 via-transparent to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <p className="max-w-md font-heading text-2xl font-black leading-tight text-white sm:text-3xl">
-                  Freshly baked sweets for everyday visits and special occasions.
-                </p>
+            <div className="bakery-image-frame h-full min-h-[420px] md:min-h-0">
+              <div className="bakery-image-frame-media">
+                <Image
+                  src="/images/assorted-jumbo-cupcakes.jpg"
+                  alt="Assorted cupcakes at Moretti Bakery"
+                  fill
+                  sizes="(min-width: 768px) 55vw, 100vw"
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-bakery-ink/70 via-transparent to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <p className="max-w-md font-heading text-2xl font-black leading-tight text-white sm:text-3xl">
+                    Freshly baked sweets for everyday visits and special occasions.
+                  </p>
+                </div>
               </div>
             </div>
           </ScrollReveal>

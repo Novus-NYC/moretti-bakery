@@ -14,16 +14,18 @@ export default function AboutStrip() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.7 }}
-          className="relative min-h-[360px] overflow-hidden rounded-lg border border-bakery-gold/20 bg-bakery-inkSoft shadow-soft md:min-h-[460px]"
+          className="bakery-image-frame min-h-[360px] md:min-h-[460px]"
         >
-          <Image
-            src="/images/seven-layer-cookies.png"
-            alt="Moretti Bakery seven layer cookies"
-            fill
-            sizes="(min-width: 768px) 50vw, 100vw"
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-bakery-ink/40 via-transparent to-transparent" />
+          <div className="bakery-image-frame-media">
+            <Image
+              src="/images/seven-layer-cookies.png"
+              alt="Moretti Bakery seven layer cookies"
+              fill
+              sizes="(min-width: 768px) 50vw, 100vw"
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-bakery-ink/40 via-transparent to-transparent" />
+          </div>
         </motion.div>
 
         <motion.div

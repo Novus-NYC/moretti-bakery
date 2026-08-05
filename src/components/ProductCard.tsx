@@ -26,7 +26,7 @@ export default function ProductCard({ product }: Props) {
   return (
     <article className="group relative flex h-full flex-col overflow-hidden rounded-lg border border-bakery-line bg-bakery-surface shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-soft">
 
-      <div className="relative aspect-[4/3] w-full overflow-hidden bg-bakery-cream">
+      <div className="bakery-tile-frame relative aspect-[4/3] w-full overflow-hidden bg-bakery-cream">
         <Image
           src={product.image}
           alt={product.name}

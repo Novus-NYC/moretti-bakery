@@ -38,7 +38,7 @@ export default function FeaturedCategories() {
             >
               <Link
                 href={`/menu?category=${cat.id}`}
-                className="group relative flex aspect-[4/5] w-full flex-col overflow-hidden rounded-lg border border-bakery-line bg-bakery-ink shadow-card transition-all hover:-translate-y-1 hover:shadow-soft"
+                className="bakery-tile-frame group relative flex aspect-[4/5] w-full flex-col overflow-hidden rounded-lg border border-bakery-gold/60 bg-bakery-ink shadow-card transition-all hover:-translate-y-1 hover:shadow-soft"
               >
                 <Image
                   src={cat.image}

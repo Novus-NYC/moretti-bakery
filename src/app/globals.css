@@ -86,3 +86,61 @@ select {
 .btn-line:hover::after {
   transform: translateX(-8px);
 }
+
+.bakery-image-frame {
+  position: relative;
+  overflow: visible;
+  border: 2px solid #D4A23F;
+  border-radius: 8px;
+  padding: 10px;
+  background:
+    linear-gradient(135deg, rgba(245, 213, 126, 0.26), rgba(110, 31, 53, 0.16)),
+    rgba(36, 19, 14, 0.12);
+  box-shadow:
+    0 24px 48px -28px rgba(36, 19, 14, 0.45),
+    inset 0 0 0 1px rgba(255, 249, 244, 0.28);
+}
+
+.bakery-image-frame::before,
+.bakery-image-frame::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.bakery-image-frame::before {
+  inset: 7px;
+  z-index: 4;
+  border: 1px solid rgba(245, 213, 126, 0.68);
+  border-radius: 5px;
+}
+
+.bakery-image-frame::after {
+  inset: -8px;
+  z-index: 5;
+  background:
+    linear-gradient(45deg, transparent 0 42%, #F5D57E 42% 58%, transparent 58%) top left / 26px 26px no-repeat,
+    linear-gradient(-45deg, transparent 0 42%, #F5D57E 42% 58%, transparent 58%) top right / 26px 26px no-repeat,
+    linear-gradient(-45deg, transparent 0 42%, #F5D57E 42% 58%, transparent 58%) bottom left / 26px 26px no-repeat,
+    linear-gradient(45deg, transparent 0 42%, #F5D57E 42% 58%, transparent 58%) bottom right / 26px 26px no-repeat;
+}
+
+.bakery-image-frame-media {
+  position: relative;
+  min-height: inherit;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid rgba(255, 249, 244, 0.32);
+  border-radius: 5px;
+}
+
+.bakery-tile-frame::after {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  z-index: 4;
+  pointer-events: none;
+  border: 1px solid rgba(245, 213, 126, 0.62);
+  border-radius: 5px;
+  box-shadow: inset 0 0 0 1px rgba(36, 19, 14, 0.16);
+}
