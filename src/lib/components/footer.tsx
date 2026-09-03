@@ -79,9 +79,10 @@ export default function Footer() {
           </div>
         </div>
 
-        <p className="mt-10 border-t border-white/10 pt-6 font-sub text-sm font-semibold uppercase text-white/35">
-          © {new Date().getFullYear()} {siteInfo.name}. All rights reserved.
-        </p>
+        <div className="mt-10 flex flex-col gap-3 border-t border-white/10 pt-6 font-sub text-sm font-semibold uppercase text-white/35 sm:flex-row sm:items-center sm:justify-between">
+          <p>© {new Date().getFullYear()} {siteInfo.name}. All rights reserved.</p>
+          <p className="text-white/55">Made by Novus</p>
+        </div>
       </div>
     </footer>
   );

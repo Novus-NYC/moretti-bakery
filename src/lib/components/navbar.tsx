@@ -12,7 +12,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-bakery-line/80 bg-bakery-bg/95 backdrop-blur-xl">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-bakery-line/60 bg-bakery-bg/70 shadow-[0_12px_40px_rgba(48,20,14,0.08)] backdrop-blur-2xl supports-[backdrop-filter]:bg-bakery-bg/55">
       <nav className="mx-auto flex h-[74px] w-full max-w-7xl items-center justify-between gap-4 px-5 md:px-8">
 
         {/* Logo */}
@@ -68,7 +68,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="border-t border-bakery-line bg-bakery-bg px-5 pb-5 md:hidden">
+        <div className="border-t border-bakery-line/70 bg-bakery-bg/90 px-5 pb-5 backdrop-blur-2xl md:hidden">
           {navLinks.map((link) => (
             <Link
               key={link.href}
