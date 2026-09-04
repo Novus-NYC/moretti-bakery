@@ -42,7 +42,7 @@ export const siteInfo: SiteInfo = {
   name: "Moretti Bakery",
   tagline: "A Legacy of Sweetness, Love & Community",
   location: "640 Forest Ave, Staten Island, NY 10310",
-  phone: "(718) 816-0252",
+  phone: "718-815-0252",
   hours: [
     { days: "Tuesday – Saturday", time: "7:00 AM – 4:00 PM" },
     { days: "Sunday",             time: "9:00 AM – 3:00 PM" },
